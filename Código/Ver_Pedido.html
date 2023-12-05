@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Pedidos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .orders-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .order-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .order-card:hover {
+            transform: scale(1.02);
+        }
+
+        .order-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .order-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {
+            background-color: #0489B1;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span>[Nome do Utilizador]</span>
+    </header>
+
+    <h1>Visualizar Pedidos</h1>
+
+    <div class="orders-container">
+        <!-- Exemplo de Card de Pedido 1 -->
+        <div class="order-card">
+            <div class="order-details">
+                <div>
+                    <h3>Cliente: [Nome do Cliente 1]</h3>
+                    <p>Data do Pedido: [Data]</p>
+                    <p>Morada do Imóvel: [Morada]</p>
+                    <p>Serviços Solicitados: [Lista de Serviços]</p>
+                </div>
+                <div>
+                    <p>Status: [Status do Pedido]</p>
+                </div>
+            </div>
+
+            <div class="order-actions">
+                <button>Ver Detalhes</button>
+                <button>Fazer Proposta</button>
+            </div>
+        </div>
+        <!-- Fim do Exemplo -->
+    </div>
+
+    <div class="orders-container">
+        <!-- Exemplo de Card de Pedido 2 -->
+        <div class="order-card">
+            <div class="order-details">
+                <div>
+                    <h3>Cliente: [Nome do Cliente 2]</h3>
+                    <p>Data do Pedido: [Data]</p>
+                    <p>Morada do Imóvel: [Morada]</p>
+                    <p>Serviços Solicitados: [Lista de Serviços]</p>
+                </div>
+                <div>
+                    <p>Status: [Status do Pedido]</p>
+                </div>
+            </div>
+
+            <div class="order-actions">
+                <button>Ver Detalhes</button>
+                <button>Fazer Proposta</button>
+            </div>
+        </div>
+        <!-- Fim do Exemplo -->
+    </div>
+
+</body>
+</html>

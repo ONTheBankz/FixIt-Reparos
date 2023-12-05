@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Manutenção</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        form:hover {
+            transform: scale(1.02);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #0489B1;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>[Nome de Utilizador]</span>
+    </header>
+    <h1>Pedido de Manutenção</h1>
+    <form>
+        <label for="tipoServico">Tipo de Serviço:</label>
+            <select id="tipoServico" name="tipoServico">
+            <option value="eletrico">Elétrico</option>
+            <option value="hidraulico">Hidráulico</option>
+            <option value="pintura">Pintura</option>
+            <option value="telhado">Telhado</option>
+            <option value="hvac">HVAC</option>
+            <option value="jardim">Jardim</option>
+            <option value="portas_janelas">Portas e Janelas</option>
+            <option value="pisos_revestimentos">Pisos e Revestimentos</option>
+            <option value="seguranca">Sistemas de Segurança</option>
+            <option value="eletrodomesticos">Eletrodomésticos</option>
+        </select>
+        
+        <label for="dataInicio">Data de Início:</label>
+        <input type="date" id="dataInicio" name="dataInicio">
+
+        <label for="dataFim">Data de Fim:</label>
+        <input type="date" id="dataFim" name="dataFim">
+
+        <label for="morada">Morada:</label>
+        <input type="text" id="morada" name="morada" placeholder="Rua, Número, Cidade">
+
+        <label for="descricao">Descrição do Pedido:</label>
+        <textarea id="descricao" name="descricao" placeholder="Informação detalhada do serviço..."></textarea>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+</body>
+</html>

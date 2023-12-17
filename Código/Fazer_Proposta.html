@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Proposta</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .proposal-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .proposal-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .proposal-card:hover {
+            transform: scale(1.02);
+        }
+
+        .proposal-details {
+            padding: 20px;
+        }
+
+        .proposal-details label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .proposal-details input,
+        .proposal-details textarea,
+        .proposal-details select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .proposal-actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #0489B1;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button.cancel {
+            background-color: #0489B1;
+        }
+
+        button:hover {
+            background-color: #046c82;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>[Nome do Utilizador]</span>
+    </header>
+    <h1>Fazer Proposta</h1>
+    <div class="proposal-container">
+        <div class="proposal-card">
+            <div class="proposal-details">
+                <label for="descricao">Descrição da Proposta:</label>
+                <textarea id="descricao" name="descricao" rows="4" placeholder="Digite a descrição da sua proposta..."></textarea>
+
+                <label for="custo">Custo Estimado (€):</label>
+                <input type="number" id="custo" name="custo" placeholder="Insira o custo estimado">
+
+                <label for="prazo">Prazo Estimado (dias):</label>
+                <input type="number" id="prazo" name="prazo" placeholder="Insira o prazo estimado">
+
+                <label for="validade">Validade da Proposta (dias):</label>
+                <input type="number" id="validade" name="validade" placeholder="Insira a validade da proposta">         </div>
+            <div class="proposal-actions">
+                <button>Enviar Proposta</button>
+                <button class="cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

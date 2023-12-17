@@ -45,7 +45,7 @@
         .payment-details {
             display: flex;
             flex-direction: column;
-            margin-bottom: 20px;
+            margin-bottom: 10px; 
         }
 
         label {
@@ -58,11 +58,12 @@
             font-size: 18px;
             color: #333;
             margin-bottom: 10px;
+            display: block;
         }
 
-        select {
+        select, input {
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             width: 100%;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -91,15 +92,26 @@
 </head>
 <body>
     <header>
-        <span>[Nome do Utilizador]</span>
+        <span>[Nome de Utilizador]</span>
     </header>
     <h1>Efetuar Pagamento</h1>
     <div class="payment-container">
         <div class="payment-card">
             <div class="payment-details">
                 <h3>Detalhes do Pagamento</h3>
+   
                 <label for="valor">Valor a Pagar:</label>
                 <span>100.00€</span>
+
+                <label for="id_empresa">ID Empresa:</label>
+                <input type="text" id="id_empresa" name="id_empresa" placeholder="123456">
+
+                <label for="id_servico">ID Serviço:</label>
+                <input type="text" id="id_servico" name="id_servico" placeholder="789012">
+
+                <label for="morada">Morada:</label>
+                <input type="text" id="morada" name="morada" placeholder="Rua Exemplo, 123">
+
                 <label for="metodo">Método de Pagamento:</label>
                 <select id="metodo" name="metodo">
                     <option value="cartao">Cartão de Crédito</option>

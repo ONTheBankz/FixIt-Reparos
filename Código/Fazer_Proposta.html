@@ -23,48 +23,44 @@
             text-align: center;
         }
 
-        .proposal-container {
+        form {
             max-width: 600px;
             margin: 0 auto;
-        }
-
-        .proposal-card {
             background-color: #fff;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             transition: transform 0.3s ease-in-out;
         }
 
-        .proposal-card:hover {
+        form:hover {
             transform: scale(1.02);
         }
 
-        .proposal-details {
-            padding: 20px;
-        }
-
-        .proposal-details label {
+        label {
             display: block;
             margin-bottom: 8px;
-            color: #555;
+            font-weight: bold;
         }
 
-        .proposal-details input,
-        .proposal-details textarea,
-        .proposal-details select {
+        input, select, textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 16px;
             box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
         }
 
-        .proposal-actions {
+        input:focus, select:focus, textarea:focus {
+            border-color: #0489B1;
+            outline: none;
+        }
+
+        .button-container {
             display: flex;
             justify-content: flex-end;
-            padding: 20px;
         }
 
         button {
@@ -90,28 +86,28 @@
 </head>
 <body>
     <header>
-        <span>[Nome do Utilizador]</span>
+        <span>[Nome de Utilizador]</span>
     </header>
     <h1>Fazer Proposta</h1>
-    <div class="proposal-container">
-        <div class="proposal-card">
-            <div class="proposal-details">
-                <label for="descricao">Descrição da Proposta:</label>
-                <textarea id="descricao" name="descricao" rows="4" placeholder="Informação detalhada da proposta..."></textarea>
+    <form>
+        <label for="descricao">Descrição da Proposta:</label>
+        <textarea id="descricao" name="descricao" required placeholder="Informação detalhada da proposta..."></textarea>
+        <label for="custo">Custo Estimado (EUR):</label>
+        <input type="number" id="custo" name="custo" required placeholder="Informe o custo estimado">
 
-                <label for="custo">Custo Estimado (€):</label>
-                <input type="number" id="custo" name="custo" placeholder="Insira o custo estimado">
+        <label for="dataInicio">Data de Início:</label>
+        <input type="date" id="dataInicio" name="dataInicio" required>
 
-                <label for="prazo">Prazo Estimado (dias):</label>
-                <input type="number" id="prazo" name="prazo" placeholder="Insira o prazo estimado">
+        <label for="dataFim">Data de Fim:</label>
+        <input type="date" id="dataFim" name="dataFim" required>
 
-                <label for="validade">Validade da Proposta (dias):</label>
-                <input type="number" id="validade" name="validade" placeholder="Insira a validade da proposta">         </div>
-            <div class="proposal-actions">
-                <button>Enviar Proposta</button>
-                <button class="cancel">Cancelar</button>
-            </div>
+        <label for="comentarios">Comentários Adicionais:</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Comentários adicionais sobre a proposta..."></textarea>
+
+        <div class="button-container">
+            <button type="submit">Enviar Proposta</button>
+            <button type="button" class="cancel-button">Cancelar</button>     
         </div>
-    </div>
+    </form>
 </body>
 </html>

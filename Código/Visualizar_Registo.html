@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Registos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .filters-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .orders-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .order-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .order-card:hover {
+            transform: scale(1.02);
+        }
+
+        .order-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .order-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {
+            background-color: #0489B1;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>[Nome do Utilizador]</span>
+    </header>
+    <h1>Visualizar Registos</h1>
+
+    <div class="filters-container">
+        <select id="tipoRegisto" name="tipoRegisto">
+            <option value="clientes">Clientes</option>
+            <option value="servicos">Serviços</option>
+            <option value="empresas">Empresas</option>
+        </select>
+        <button onclick="filtrarRegistos()">Filtrar</button>
+    </div>
+
+    <div class="orders-container">
+        <div class="order-card">
+            <div class="order-details">
+                <div>
+                    <h3>ID do Cliente: [ID do Cliente 1]</h3>
+                    <p>Nome: [Nome do Cliente 1]</p>
+                    <p>Contacto: [Contacto do Cliente 1]</p>
+                    <p>Morada: [Morada do Cliente 1]</p>
+                </div>
+            </div>
+            <div class="order-actions">
+                <button onclick="executarAcao('ver')">Ver Detalhes</button>
+                <button onclick="executarAcao('editar')">Editar</button>
+                <button onclick="executarAcao('eliminar')">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="orders-container">
+        <div class="order-card">
+            <div class="order-details">
+                <div>
+                    <h3>ID do Cliente: [ID do Cliente 2]</h3>
+                    <p>Nome: [Nome do Cliente 2]</p>
+                    <p>Contacto: [Contacto do Cliente 2]</p>
+                    <p>Morada: [Morada do Cliente 2]</p>
+                </div>
+            </div>
+            <div class="order-actions">
+                <button onclick="executarAcao('ver')">Ver Detalhes</button>
+                <button onclick="executarAcao('editar')">Editar</button>
+                <button onclick="executarAcao('eliminar')">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filtrarRegistos() {
+            var tipoRegisto = document.getElementById("tipoRegisto").value;
+            // Adicione a lógica de filtragem aqui com base no tipo de registo selecionado
+            console.log("Filtrando por:", tipoRegisto);
+        }
+
+        function executarAcao(acao) {
+            // Adicione a lógica para executar a ação selecionada (ver, editar, eliminar)
+            console.log("Ação:", acao);
+        }
+    </script>
+
+</body>
+</html>
